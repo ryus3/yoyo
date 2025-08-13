@@ -1,1 +1,0 @@
-export const AmiriFont = `AAEAAAARAQAABAAQR0RFRg... (font data truncated for brevity)`;
