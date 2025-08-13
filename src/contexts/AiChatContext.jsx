@@ -1,26 +1,22 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useState, useContext } from 'react';
+import { useAuth } from './UnifiedAuthContext';
+import { usePermissions } from '@/hooks/usePermissions';
 
-const AiChatContext = createContext({});
+const AiChatContext = createContext();
 
-export const useAiChat = () => {
-  const context = useContext(AiChatContext);
-  if (!context) {
-    throw new Error('useAiChat must be used within an AiChatProvider');
-  }
-  return context;
-};
+export const useAiChat = () => useContext(AiChatContext);
 
 export const AiChatProvider = ({ children }) => {
   const [aiChatOpen, setAiChatOpen] = useState(false);
+  const { hasPermission } = usePermissions();
+  
+  const canUseAiChat = true; // المساعد الذكي متاح للجميع
 
   const value = {
     aiChatOpen,
-    setAiChatOpen
+    setAiChatOpen,
+    canUseAiChat
   };
 
-  return (
-    <AiChatContext.Provider value={value}>
-      {children}
-    </AiChatContext.Provider>
-  );
+  return <AiChatContext.Provider value={value}>{children}</AiChatContext.Provider>;
 };

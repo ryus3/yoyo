@@ -1,16 +1,11 @@
 import React from 'react';
+import { Loader2 } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
-const Loader = ({ size = 'md', className = '' }) => {
-  const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-    lg: 'w-12 h-12',
-    xl: 'w-16 h-16'
-  };
-
+const Loader = ({ className }) => {
   return (
-    <div className={`flex items-center justify-center ${className}`}>
-      <div className={`${sizeClasses[size]} animate-spin rounded-full border-2 border-gray-300 border-t-blue-600`}></div>
+    <div className={cn("flex items-center justify-center w-full h-full", className)}>
+      <Loader2 className="h-12 w-12 animate-spin text-primary" />
     </div>
   );
 };
