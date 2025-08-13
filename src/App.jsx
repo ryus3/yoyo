@@ -85,7 +85,7 @@ function AppContent() {
   return (
     <div className="h-dvh bg-background text-foreground">
        <Helmet>
-        <title>RYUS</title>
+        <title>RYUS | نظام إدارة المخزون والطلبات</title>
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#ffffff" />
       </Helmet>
