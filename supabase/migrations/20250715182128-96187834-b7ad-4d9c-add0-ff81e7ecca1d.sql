@@ -1,1 +1,0 @@
-UPDATE ai_orders SET order_data = jsonb_set(order_data, '{delivery_type}', '"استلام محلي"') WHERE id = 'e1992c70-4060-4c71-a2ed-b1b0d3afc350';
