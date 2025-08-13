@@ -119,7 +119,7 @@
     @apply border-[var(--border)];
   }
   body, html {
-    @apply bg-background text-foreground;
+    @apply bg-[hsl(var(--background))] text-[hsl(var(--foreground))];
     font-family: 'Cairo', sans-serif;
     direction: rtl;
     height: 100dvh;
