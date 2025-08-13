@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Package, TriangleAlert } from 'lucide-react';
+import { Package, AlertTriangle } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import { useInventory } from '@/contexts/SuperProvider';
@@ -89,7 +89,7 @@ const StockAlertsCard = () => {
       <CardHeader className="pb-4 border-b border-border/30">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <TriangleAlert className={cn(
+            <AlertTriangle className={cn(
               "w-5 h-5 text-amber-600 transition-all duration-300",
               isRefreshing && "animate-spin"
             )} />
